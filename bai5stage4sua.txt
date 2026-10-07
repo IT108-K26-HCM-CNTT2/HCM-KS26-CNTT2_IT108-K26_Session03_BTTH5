@@ -1,0 +1,74 @@
+PHẦN 1. PHÂN TÍCH & SO SÁNH
+
+1. Bảng so sánh đường dẫn tuyệt đối và đường dẫn tương đối
+
++----------------------+------------------------------------------+--------------------------------------+
+| Tiêu chí             | Đường dẫn tuyệt đối                      | Đường dẫn tương đối                  |
++----------------------+------------------------------------------+--------------------------------------+
+| Khái niệm            | Ghi đầy đủ vị trí file từ ổ đĩa          | Xác định file dựa vào thư mục hiện tại|
+| Ví dụ                | C:\Users\Ban_Than\Desktop\Project\   | data\db.csv                          |
+|                      | data\db.csv                             |                                      |
+| Ưu điểm              | Xác định chính xác vị trí file           | Dễ di chuyển project sang máy khác   |
+| Nhược điểm           | Dễ bị lỗi khi sang máy khác              | Phải xác định đúng thư mục hiện tại  |
+| Tính linh hoạt      | Thấp                                     | Cao                                  |
++----------------------+------------------------------------------+--------------------------------------+
+
+2. Tính thời gian tải file 2GB với mạng 80 Mbps
+
+Ta có:
+- 1 Byte = 8 bit.
+- 80 Mbps = 80 Megabit/giây.
+- Đổi sang MB/s: 80 / 8 = 10 MB/s.
+- 2GB = 2048 MB.
+
+Thời gian tải:
+2048 / 10 = 204,8 giây.
+
+Vậy thời gian tải lý thuyết là 204,8 giây, tương đương khoảng 3 phút 25 giây.
+
+Thực tế có thể lâu hơn do tốc độ mạng không ổn định và các yếu tố khác.
+
+
+PHẦN 2. HÀNH ĐỘNG
+
+1. Viết lại đường dẫn dưới dạng Relative Path
+
+Đường dẫn tuyệt đối ban đầu:
+C:\Users\Ban_Than\Desktop\Project\data\db.csv
+
+Nếu thư mục hiện tại là Project thì Relative Path là:
+data\db.csv
+
+Hoặc:
+.\data\db.csv
+
+Trong trường hợp đang ở một thư mục con và cần quay lại thư mục cha thì dùng:
+..\data\db.csv
+
+2. Thiết lập View Options để nhận diện file mã độc
+
+Các bước thực hiện trên Windows 11:
+
+- Bước 1: Mở thư mục chứa file tai-lieu-on-tap.pdf.
+- Bước 2: Chọn View trên thanh công cụ.
+- Bước 3: Chọn Show.
+- Bước 4: Bật File name extensions để hiện phần mở rộng của file.
+- Bước 5: Bật Hidden items để hiển thị cả những file/thư mục bị ẩn.
+- Bước 6: Kiểm tra lại tên file.
+
+Nếu file thực tế có tên:
+tai-lieu-on-tap.pdf.exe
+
+thì đây là file thực thi .exe đang giả dạng tài liệu PDF. Không nên mở file này.
+
+3. Xử lý file nghi ngờ
+
+- Không mở hoặc chạy file nghi ngờ.
+- Có thể nhấp chuột phải vào file và chọn Scan with Microsoft Defender để quét virus.
+- Nếu phát hiện mã độc, thực hiện cách ly (quarantine) hoặc xóa file theo hướng dẫn của phần mềm bảo mật.
+- Báo cáo cho người gửi rằng file có dấu hiệu đáng ngờ trước khi tiếp tục sử dụng.
+
+
+KẾT LUẬN
+
+Qua bài này, em hiểu được sự khác nhau giữa Mbps và MB/s khi tính thời gian tải file. Em cũng biết cách sử dụng Relative Path để project dễ di chuyển giữa các máy. Ngoài ra, việc bật File name extensions và Hidden items giúp kiểm tra chính xác tên file, từ đó hạn chế mở nhầm file mã độc.
